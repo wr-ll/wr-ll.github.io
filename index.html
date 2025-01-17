@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>wrell</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    html, body { 
+      height: 100%; 
+      margin: 0; 
+    }
+
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('blurred_pfp.jpeg'); /* Use the blurred image as background */
+      background-size: cover;
+      background-position: center;
+      color: white; 
+    }
+
+    img {
+      width: 150px; 
+      height: 150px;
+      border-radius: 50%; 
+      margin-bottom: 20px; 
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center; 
+      margin-bottom: 15px; 
+      font-size: 1.2em; 
+    }
+
+    .icon-link {
+      font-size: 2em; 
+      color: white; 
+      margin-right: 20px; 
+    }
+
+    #timestamp { /* Style for the timestamp */
+      font-size: 1em;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="pfp.jpeg" alt="Your Profile Picture"> 
+
+  <h1>wrell</h1>
+  <p>
+    uni student studying cs & maths (with a heavy interest in RL)
+  </p>
+  <p>
+    i also draw!! feel free to dm
+    <br>
+  </p>
+
+  <script>
+    function updateTimestamp() {
+      const now = new Date();
+      const options = { 
+        timeZone: 'Europe/London', 
+        hour: 'numeric', 
+        minute: 'numeric', 
+        second: 'numeric', 
+        day: 'numeric', 
+        month: 'short', 
+        year: 'numeric' 
+      };
+      const timestamp = now.toLocaleString('en-GB', options); // UK format
+      document.getElementById('timestamp').textContent = "my current time is " + timestamp;
+    }
+
+    // Update the timestamp every second
+    setInterval(updateTimestamp, 1000); 
+  </script>
+
+  <div class="social-link">
+    <a href="https://x.com/wr_ell" class="icon-link"><i class="fab fa-twitter"></i></a>
+    <span>@wr_ell</span> 
+  </div>
+
+  <div class="social-link">
+    <a href="https://github.com/wr-ll" class="icon-link"><i class="fab fa-github"></i></a>
+    <span>wr-ll</span> 
+  </div>
+
+  <div class="social-link">
+    <a href="https://www.youtube.com/watch?v=FtutLA63Cp8" class="icon-link"><i class="fab fa-discord"></i></a>
+    <span>wr.ll</span> 
+  </div>
+
+  <div id="timestamp"></div> 
+
+
+</body>
+</html>
