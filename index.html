@@ -74,7 +74,9 @@
         year: 'numeric'
       };
       const timestamp = now.toLocaleString('en-GB', options); // UK format
-      document.getElementById('timestamp').textContent = "my current time is " + timestamp;
+      const time = document.querySelector('#timestamp > time');
+      time.setAttribute('datetime', now.toISOString());
+      time.textContent = timestamp;
     }
 
     // Update the timestamp every second
@@ -96,7 +98,7 @@
     <span>wr.ll</span>
   </div>
 
-  <div id="timestamp"></div>
+  <p id="timestamp">my current time is <time></time></p>
 
 
 </body>
